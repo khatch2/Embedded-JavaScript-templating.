@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My EJS Template</title>
-</head>
-<body>
-    <h1>Welcome to my EJS template!</h1>
-    <p>This is a basic example of an EJS template.</p>
-    <ul>
-        <% for(let i = 0; i < fruits.length; i++) { %>
-            <li><%= fruits[i] %></li>
-        <% } %>
-    </ul>
-</body>
-</html>
+let ejs = require('ejs');
+let people = ['geddy', 'neil', 'alex'];
+let html = ejs.render('<%= people.join(", "); %>', {people: people});
